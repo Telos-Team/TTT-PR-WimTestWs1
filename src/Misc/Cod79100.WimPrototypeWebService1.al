@@ -1,5 +1,7 @@
 codeunit 79100 "TTT-PR WimPrototypeWebService1"
 {
+    Description = 'These methods are used for testing web service speeds.';
+
     trigger OnRun()
     begin
     end;
