@@ -7,49 +7,15 @@ codeunit 79100 "TTT-PR WimPrototypeWebService1"
     end;
 
     procedure DoMessage(partxtIncomingMessage: Text) partxtOutgoingMessage: Text
+    var
+        loctbResponse: TextBuilder;
+        locintCounter: Integer;
     begin
-        partxtOutgoingMessage :=
-          Format(CurrentDateTime(), 0, 9) + ' ' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF' +
-          'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF';
+        loctbResponse.Append(Format(CurrentDateTime(), 0, 9));
+        loctbResponse.Append(' ');
+        for locintCounter := 1 to 40 do
+            loctbResponse.Append('qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF');
+        partxtOutgoingMessage := loctbResponse.ToText();
     end;
 
     procedure DoSleep(partxtIncomingMessage: Text; parintMS: Integer) partxtOutgoingMessage: Text
@@ -64,7 +30,7 @@ codeunit 79100 "TTT-PR WimPrototypeWebService1"
         locintSessionId: Integer;
     begin
         locrecInt.Get(parintMS);
-        StartSession(locintSessionId, codeunit::"TTT-PR WimSleeper", '', locrecInt);
+        StartSession(locintSessionId, codeunit::"TTT-PR WimSleeper", CompanyName(), locrecInt);
         partxtOutgoingMessage := StrSubstNo('(%1)', locintSessionId) + DoMessage(partxtIncomingMessage);
     end;
 
@@ -75,12 +41,13 @@ codeunit 79100 "TTT-PR WimPrototypeWebService1"
         locintSleeps: Integer;
     begin
         locrecInt.Get(parintMS);
-        if StartSession(locintSessionId, codeunit::"TTT-PR WimSleeper", '', locrecInt) then
-            while (IsSessionActive(locintSessionId)) do begin
-                Sleep(100);
-                if locintSleeps = 5 * 60 * 10 then
-                    if StopSession(locintSessionId) then;
-            end;
+        StartSession(locintSessionId, codeunit::"TTT-PR WimSleeper", CompanyName(), locrecInt);
+        while (IsSessionActive(locintSessionId)) do begin
+            Sleep(100);
+            locintSleeps += 1;
+            if locintSleeps = 5 * 60 * 10 then
+                if StopSession(locintSessionId) then;
+        end;
         partxtOutgoingMessage := StrSubstNo('(%1)[%2]', locintSessionId, locintSleeps) + DoMessage(partxtIncomingMessage);
     end;
 }
