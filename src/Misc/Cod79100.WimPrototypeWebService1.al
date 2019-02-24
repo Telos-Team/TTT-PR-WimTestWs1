@@ -18,6 +18,20 @@ codeunit 79100 "TTT-PR WimPrototypeWebService1"
         partxtOutgoingMessage := loctbResponse.ToText();
     end;
 
+    procedure DoMessageSize(partxtIncomingMessage: Text; parintSize: Integer) partxtOutgoingMessage: Text
+    var
+        loctbResponse: TextBuilder;
+        locintCounter: Integer;
+    begin
+        loctbResponse.Append(Format(CurrentDateTime(), 0, 9));
+        loctbResponse.Append(' ');
+        if parintSize < 0 then
+            parintSize := 0;
+        for locintCounter := 1 to parintSize do
+            loctbResponse.Append('qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFqwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDF');
+        partxtOutgoingMessage := loctbResponse.ToText();
+    end;
+
     procedure DoSleep(partxtIncomingMessage: Text; parintMS: Integer) partxtOutgoingMessage: Text
     begin
         Sleep(parintMS);

@@ -1,28 +1,28 @@
 {
-  "id": "83a8bd5f-5a2f-42ff-902e-2166082460c0",
-  "name": "TTTPR WimTestWs1",
-  "publisher": "Telos Team",
-  "brief": "TTTPR WimTestWs1",
-  "description": "TTTPR WimTestWs1",
-  "version": "1.0.0.0",
-  "privacyStatement": "http://telosteam.dk/privacy",
-  "EULA": "http://telosteam.dk/eula",
-  "help": "http://telosteam.dk/support",
-  "url": "http://telosteam.dk",
-  "logo": "./res/TT_Logo square.png",
-  "capabilities": [],
-  "features": [
-    "TranslationFile"
-  ],
-  "dependencies": [],
-  "screenshots": [],
-  "platform": "13.0.0.0",
-  "application": "13.0.0.0",
-  "idRange": {
-    "from": 79100,
-    "to": 79199
-  },
-  "runtime": "2.3",
-  "showMyCode": true,
-  "target": "Extension"
+    "id": "83a8bd5f-5a2f-42ff-902e-2166082460c0",
+    "name": "TTTPR WimTestWs1",
+    "publisher": "Telos Team",
+    "brief": "TTTPR WimTestWs1",
+    "description": "TTTPR WimTestWs1",
+    "version": "1.0.0.0",
+    "privacyStatement": "http://telosteam.dk/privacy",
+    "EULA": "http://telosteam.dk/eula",
+    "help": "http://telosteam.dk/support",
+    "url": "http://telosteam.dk",
+    "logo": "./res/TT_Logo square.png",
+      "capabilities": [],
+    "features": [
+        "TranslationFile"
+    ],
+    "dependencies": [],
+    "screenshots": [],
+    "platform": "13.0.0.0",
+    "application": "13.0.0.0",
+    "idRange": {
+        "from": 79100,
+        "to": 79999
+    },
+    "runtime": "2.3",
+    "showMyCode": true,
+    "target": "Extension"
 }
